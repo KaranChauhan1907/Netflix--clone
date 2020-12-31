@@ -13,7 +13,7 @@ useEffect(()=>{
     }
     fetchdata();
 },[fetchurl]);
-    // console.log(movies)
+    console.log(movies)
 
     return (
         <div className="row">
@@ -22,8 +22,8 @@ useEffect(()=>{
                 {movies.map(movie =>(
                     <img
                     key={movie.id}
-                    className={`row_poster ${isLargeRow && "row_posterLarge"}`} 
-                    src={`${baseImgUrl}${isLargeRow?movie.poster_path:movie.backdrop_path}`} 
+                    className="row_poster" 
+                    src={`${baseImgUrl}${movie.poster_path}`} 
                     alt={movie.name}/>
                 ))}
            </div>
